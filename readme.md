@@ -1,0 +1,1 @@
+Hands-on labs and notes from my CI/CD module, covering continuous integration, continuous delivery, and continuous deployment.Includes practical exercises in automating builds, running tests, and creating deployment pipelines.
