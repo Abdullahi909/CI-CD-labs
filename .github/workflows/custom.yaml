@@ -1,4 +1,4 @@
-name: coder co custom action CI
+name: coder co custom actions CI
 
 on: [push]
 
