@@ -1,0 +1,19 @@
+name: coder co custom action CI
+
+on: [push]
+
+jobs:
+    build:
+         runs-on: ubuntu-latest
+
+
+         steps:
+            - name: checkout
+              uses: action/checkout@v2
+               
+            - name: hello world custom action
+              uses: abdullahi909/custom@main
+              with:
+                who-to-greet: "abdullahi"
+
+                 
