@@ -2,12 +2,12 @@ name: manual coderco workflow
 
 on:
     push:
-    workflow-dispatch:
+    workflow_dispatch:
         inputs:
             python-version:
                 description: chose python version
                 required: true
-                defualt: '3.8'
+                default: '3.8'
                 type: choice
                 options:
                     - 3.9
@@ -29,7 +29,7 @@ jobs:
          - name: setup python 
            uses: actions/setup-python@v2
            with:
-            python-version: ${{matrix.python-version}}
+            python-version: ${{ github.events.inputs.python-version }}
 
          - name: install dependencies 
            run: |
@@ -43,5 +43,5 @@ jobs:
             python -m unittest discover 
          
          - name: notify us of success 
-           run: echo "tests passed on python ${{matrix.python-version}}"
+           run: echo "tests passed on python ${{ github.events.inputs.python-version }}"
            if: success ()
