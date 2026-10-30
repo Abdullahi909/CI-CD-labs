@@ -20,7 +20,7 @@ jobs:
 
         strategy:
             matrix:
-                python-version: [${{ github.events.inputs.python-version }}]
+                python-version: ${{ github.events.inputs.python-version }}
 
         steps:
          - name: checkout code 
